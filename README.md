@@ -6,9 +6,9 @@ As a security analyst, it's important to know where to find answers. Linux offer
 1. [Project description](#scenario)
 2. [Learn more about commands](#morecomands)
 3. [Explore the useradd command](#useraddcommands)
-4. [Change file permissions on a hidden file](#permissions2)
-5. [Change directory permissions](#permissions3)
-6. [Summary](#summary)
+4. [Explore the rm and rmdir commands](#evenmorecomands)
+5. [Determine which command to use](#comandstouse)
+6. [Conclusion](#conclusion)
 
 ## Scenario <a name="scenario">
 In this scenario, you have to find more information about commands that you need to use. You also need to discover which command to use to perform a certain task.
@@ -171,3 +171,138 @@ Note: You can output more information one line at a time by pressing the ENTER k
               -g, --gid GROUP
                   The group name or number of the user's initial login group.
               --More--
+
+## Explore the rm and rmdir commands <a name="evenmorecomands">
+You need to determine the difference between the `rm` and `rmdir` commands.
+
+Imagine that you’ve used these commands before, but you can’t remember how they’re different.
+
+Use the most appropriate Linux command to quickly remind yourself what each command does.
+Note: This task will require entering two commands, one with rm and one with rmdir .
+
+>analyst@3b59a3cd53af:~$ `whatis rm`
+
+       rm (1)               - remove files or directories
+>analyst@3b59a3cd53af:~$ `whatis rmdir`
+
+       rmdir (1)            - remove empty directories
+       rmdir (2)            - delete a directory
+
+## Determine which command to use <a name="comandstouse">
+Imagine that you need to create a new group but you can’t remember what command to use. You need to identify a command that will do this by searching for it through keywords. In this case, use the keywords `create new group`.
+
+Use the most appropriate Linux command with these keywords to identify what command to use.
+
+>analyst@3b59a3cd53af:~$ `whatis create new group`
+
+      group (5)            - user group file
+      create: nothing appropriate.
+      new: nothing appropriate. 
+
+>analyst@3b59a3cd53af:~$ `man create new group`
+
+       No manual entry for create
+       No manual entry for new
+       GROUP(5)                Linux Programmer's Manual                GROUP(5)
+
+       NAME
+              group - user group file
+
+       DESCRIPTION
+              The  /etc/group file is a text file that defines the groups on the
+              system.  There is one entry per line, with the following format:
+
+                  group_name:password:GID:user_list
+
+              The fields are as follows:
+
+              group_name  the name of the group.
+
+              password    the (encrypted) group  password.   If  this  field  is
+                          empty, no password is needed.
+
+              GID         the numeric group ID.
+
+              user_list   a  list  of  the  usernames  that  are members of this
+                          group, separated by commas.
+
+       FILES
+              /etc/group
+
+       BUGS
+              As the 4.2BSD initgroups(3) man page says: no one  seems  to  keep
+              /etc/group up-to-date.
+
+       SEE ALSO
+              chgrp(1),  gpasswd(1), groups(1), login(1), newgrp(1), sg(1), get-
+              grent(3), getgrnam(3), gshadow(5), passwd(5), vigr(8)
+
+       COLOPHON
+              This page is part of release 4.16 of the Linux man-pages  project.
+              A  description  of  the project, information about reporting bugs,
+              and  the  latest  version  of  this  page,   can   be   found   at
+              https://www.kernel.org/doc/man-pages/.
+
+       Linux                           2018-04-30                       GROUP(5)
+
+>analyst@3b59a3cd53af:~$ `apropos create new group`
+
+       passwords and groups
+       pwunconv (8)         - convert to and from shadow passwords and groups
+       .............
+       addgroup (8)         - add a user or group to the system
+       addseverity (3)      - introduce new severity classes
+       adduser (8)          - add a user or group to the system
+       adduser.conf (5)     - configuration file for adduser(8) and addgroup(8) .
+       .......
+       delgroup (8)         - remove a user or group from the system
+       deluser (8)          - remove a user or group from the system
+       deluser.conf (5)     - configuration file for deluser(8) and delgroup(8) .
+       .......
+       group (5)            - user group file
+       group.conf (5)       - configuration file for the pam_group module
+       group_member (3)     - test whether a process is in a group
+       `groupadd (8)         - create a new group`
+       groupdel (8)         - delete a group
+       groupmod (8)         - modify a group definition on the system
+       groups (1)           - print the groups a user is in
+       grpck (8)            - verify integrity of group files
+       grpconv (8)          - convert to and from shadow passwords and groups
+       grpunconv (8)        - convert to and from shadow passwords and groups
+       gshadow (5)          - shadowed group file
+       .......
+       memfd_create (2)     - create an anonymous file
+       mkdir (2)            - create a directory
+       mkdirat (2)          - create a directory
+       .......
+       addgnupghome (8)     - Create .gnupg home directories
+       addgroup (8)         - add a user or group to the system
+       addseverity (3)      - introduce new severity classes
+       adduser (8)          - add a user or group to the system
+       adduser.conf (5)     - configuration file for adduser(8) and addgroup(8) .
+       .......
+       tc-cgroup (8)        - control group based traffic control filter
+       cgroup_namespaces (7) - overview of Linux cgroup namespaces
+       cgroups (7)          - Linux control groups
+       chgpasswd (8)        - update group passwords in batch mode
+       chgrp (1)            - change group ownership
+       .......
+       chown (1)            - change file owner and group
+       delgroup (8)         - remove a user or group from the system
+       deluser (8)          - remove a user or group from the system
+       deluser.conf (5)     - configuration file for deluser(8) and delgroup(8) .
+       .......
+
+using the `-a` to lessen the amount of results to the relevent keywords.
+
+>analyst@3b59a3cd53af:~$ `apropos -a  `create new group`
+
+       groupadd (8)         - create a new group
+
+## Conclusion <a name="conclusion">
+You now have practical experience in using basic Linux Bash shell commands to
+
+get a short description of a command,
+display the man pages for a command, and
+find commands based on keywords about their function.
+This ability will be valuable as you navigate the Linux command line.
