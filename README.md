@@ -3,7 +3,7 @@ As a security analyst, it's important to know where to find answers. Linux offer
 
 ## Table of contents
 
-1. [Project description](#scenario)
+1. [Scenario](#scenario)
 2. [Learn more about commands](#morecomands)
 3. [Explore the useradd command](#useraddcommands)
 4. [Explore the rm and rmdir commands](#evenmorecomands)
