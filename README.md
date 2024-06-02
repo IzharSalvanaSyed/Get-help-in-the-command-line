@@ -24,7 +24,8 @@ First, imagine you can’t quite remember what the cat command does and want a q
 
 Run the `whatis` command to get a short description of `cat`.
 >analyst@b705131443c6:~$ `whatis cat`  
->cat (1)              - concatenate files and print on the standard output
+
+       cat (1)              - concatenate files and print on the standard output
 
 Next, imagine that you want more details about `cat` and all of its options.
 
@@ -32,7 +33,8 @@ Use the man command to get more details about `cat`.
 The man command returns a general description of `cat` and information about each of its options:
 
 >analyst@b705131443c6:~$ `man cat`  
->CAT(1)                         User Commands                         CAT(1)
+
+       CAT(1)                         User Commands                         CAT(1)
        
        NAME
               cat - concatenate files and print on the standard output
