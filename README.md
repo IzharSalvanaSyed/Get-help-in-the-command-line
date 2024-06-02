@@ -31,7 +31,7 @@ Next, imagine that you want more details about `cat` and all of its options.
 Use the man command to get more details about `cat`.
 The man command returns a general description of `cat` and information about each of its options:
 
->analyst@b705131443c6:~$ `man cat`
+>analyst@b705131443c6:~$ `man cat`  
 >CAT(1)                         User Commands                         CAT(1)
        
        NAME
