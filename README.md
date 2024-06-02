@@ -33,46 +33,44 @@ The man command returns a general description of `cat` and information about eac
 
 >analyst@b705131443c6:~$ `man cat`
 >CAT(1)                         User Commands                         CAT(1)
+       
+       NAME
+              cat - concatenate files and print on the standard output
+       SYNOPSIS
+              cat [OPTION]... [FILE]...
+       
+       DESCRIPTION
+              Concatenate FILE(s) to standard output.
+              With no FILE, or when FILE is -, read standard input.
+              -A, --show-all
+                     equivalent to -vET
 
-NAME
-       cat - concatenate files and print on the standard output
+              -b, --number-nonblank
+                     number nonempty output lines, overrides -n
 
-SYNOPSIS
-       cat [OPTION]... [FILE]...
+              -e     equivalent to -vE
 
-DESCRIPTION
-       Concatenate FILE(s) to standard output.
+              -E, --show-ends
+                     display $ at end of each line
 
-       With no FILE, or when FILE is -, read standard input.
+              -n, --number
+                     number all output lines
 
-       -A, --show-all
-              equivalent to -vET
+              -s, --squeeze-blank
+                     suppress repeated empty output lines
 
-       -b, --number-nonblank
-              number nonempty output lines, overrides -n
+              -t     equivalent to -vT
 
-       -e     equivalent to -vE
+              -T, --show-tabs
+                     display TAB characters as ^I
 
-       -E, --show-ends
-              display $ at end of each line
+              -u     (ignored)
 
-       -n, --number
-              number all output lines
+              -v, --show-nonprinting
+                     use ^ and M- notation, except for LFD and TAB
 
-       -s, --squeeze-blank
-              suppress repeated empty output lines
+              --help display this help and exit
 
-       -t     equivalent to -vT
-
-       -T, --show-tabs
-              display TAB characters as ^I
-
-       -u     (ignored)
-
-       -v, --show-nonprinting
-              use ^ and M- notation, except for LFD and TAB
-
-       --help display this help and exit
-
-       --version
-              output version information and exit
+              --version
+                     output version information and exit
+       --More--
