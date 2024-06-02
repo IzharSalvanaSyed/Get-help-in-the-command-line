@@ -23,5 +23,5 @@ In this task, you need to explore a few commands you can use in the shell to lea
 First, imagine you can’t quite remember what the cat command does and want a quick reminder.
 
 Run the `whatis` command to get a short description of `cat`.
->analyst@b705131443c6:~$ `whatis cat`
+>analyst@b705131443c6:~$ `whatis cat`  
 >cat (1)              - concatenate files and print on the standard output
