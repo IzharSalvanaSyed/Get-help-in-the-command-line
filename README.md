@@ -295,7 +295,7 @@ Use the most appropriate Linux command with these keywords to identify what comm
 
 using the `-a` to lessen the amount of results to the relevent keywords.
 
->analyst@3b59a3cd53af:~$ `apropos -a  `create new group`
+>analyst@3b59a3cd53af:~$ `apropos -a  create new group`
 
        groupadd (8)         - create a new group
 
